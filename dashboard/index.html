@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentinelAI | E-commerce Log Monitoring</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>SentinelAI</h2>
+    <p class="nav-item active" onclick="showSection('overview')">Overview</p>
+    <p class="nav-item" onclick="showSection('logs')">Log Explorer</p>
+    <p class="nav-item" onclick="showSection('analytics')">Error Analytics</p>
+    <p class="nav-item" onclick="showSection('alerts')">Alerts</p>
+    <p class="nav-item" onclick="showSection('aws')">AWS Services</p>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h1>Log Monitoring Dashboard</h1>
+        <p>Centralized E-commerce Error Monitoring</p>
+      </div>
+      <span class="status">● DEMO MODE</span>
+    </header>
+
+    <section class="cards">
+      <article><p>Total Logs</p><h2 id="total">7</h2></article>
+      <article><p>Total Errors</p><h2 id="errors">3</h2></article>
+      <article><p>Warnings</p><h2 id="warnings">1</h2></article>
+      <article><p>System Status</p><h2 class="healthy">Monitoring</h2></article>
+    </section>
+
+    <section class="panel">
+      <h2>Error Analytics</h2>
+      <div class="bar-row">
+        <span>Payment Gateway Timeout</span>
+        <div class="bar"><div style="width:67%"></div></div>
+        <b>2</b>
+      </div>
+      <div class="bar-row">
+        <span>Database Errors</span>
+        <div class="bar"><div style="width:33%"></div></div>
+        <b>1</b>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Recent Application Logs</h2>
+      <input id="search" type="text" placeholder="Search logs...">
+      <table>
+        <thead>
+          <tr><th>Timestamp</th><th>Level</th><th>Message</th></tr>
+        </thead>
+        <tbody id="logTable"></tbody>
+      </table>
+    </section>
+
+    <footer>SentinelAI · Centralized Log Error Monitoring · AWS Project</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

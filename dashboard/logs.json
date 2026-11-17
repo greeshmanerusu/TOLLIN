@@ -1,0 +1,37 @@
+[
+  {
+    "time": "2026-10-11 10:00:01",
+    "level": "INFO",
+    "message": "Order placed successfully order_id=101"
+  },
+  {
+    "time": "2026-10-11 10:00:05",
+    "level": "INFO",
+    "message": "Payment completed order_id=101"
+  },
+  {
+    "time": "2026-10-11 10:01:12",
+    "level": "ERROR",
+    "message": "Payment gateway timeout order_id=102"
+  },
+  {
+    "time": "2026-10-11 10:01:20",
+    "level": "WARNING",
+    "message": "Inventory service responding slowly"
+  },
+  {
+    "time": "2026-10-11 10:02:15",
+    "level": "ERROR",
+    "message": "Database connection failed"
+  },
+  {
+    "time": "2026-10-11 10:03:10",
+    "level": "INFO",
+    "message": "Order shipped successfully order_id=101"
+  },
+  {
+    "time": "2026-10-11 10:04:00",
+    "level": "ERROR",
+    "message": "Payment gateway timeout order_id=103"
+  }
+]

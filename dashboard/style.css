@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1120;
+  color: #e8eef9;
+  display: flex;
+}
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background: #111b2e;
+  padding: 25px 18px;
+}
+.sidebar h2 { color: #60a5fa; margin-bottom: 40px; }
+.sidebar p { padding: 13px; color: #aab7cc; border-radius: 7px; }
+.sidebar .active { background: #203657; color: white; }
+main { padding: 30px; width: calc(100% - 220px); }
+header { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+header h1 { margin-bottom: 8px; }
+header p, article p { color: #9eacc3; }
+.status { color: #6ee7b7; font-size: 12px; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 28px 0; }
+article, .panel {
+  background: #151f32;
+  border: 1px solid #283750;
+  border-radius: 12px;
+  padding: 20px;
+}
+article h2 { font-size: 30px; }
+.healthy { color: #6ee7b7; font-size: 20px; }
+.panel { margin-bottom: 22px; overflow-x: auto; }
+.bar-row { display: grid; grid-template-columns: 220px 1fr 25px; gap: 15px; align-items: center; margin: 24px 0; }
+.bar { background: #29364b; height: 10px; border-radius: 10px; overflow: hidden; }
+.bar div { background: #60a5fa; height: 100%; border-radius: 10px; }
+input { padding: 12px; width: 100%; margin: 10px 0 20px; background: #0b1120; color: white; border: 1px solid #394964; border-radius: 7px; }
+table { border-collapse: collapse; width: 100%; text-align: left; }
+th, td { padding: 14px 10px; border-bottom: 1px solid #29364b; }
+th { color: #9eacc3; }
+.error { color: #f87171; }
+.warning { color: #fbbf24; }
+.info { color: #6ee7b7; }
+footer { color: #8291a9; padding: 20px 0; font-size: 12px; }
+@media(max-width: 900px) {
+  .sidebar { width: 150px; }
+  main { width: calc(100% - 150px); padding: 18px; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .bar-row { grid-template-columns: 1fr; gap: 8px; }
+}
+@media(max-width: 550px) {
+  body { display: block; }
+  .sidebar { width: 100%; min-height: auto; }
+  main { width: 100%; }
+  header { align-items: flex-start; flex-direction: column; }
+}
